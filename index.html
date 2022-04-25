@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -7,7 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="./font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/playing.css">
+	<style>
+		body {
+			background: url('./img/wood.png')
+		}
+
+		.content-area {
+			background: #e5b27e;
+		}
+	</style>
 </head>
+
 <body>
 
 	<div id="container">
@@ -15,10 +26,11 @@
 
 			<div id="info-board">
 				<img id="oppo1-avartar" class="oppo-avt" src="img/tus.jpg">
-				<img id="vs" src="img/vs.png">
+				<img id="vs" src="img/light/vs.png">
 				<img id="oppo2-avartar" class="oppo-avt" src="img/nang.png">&nbsp;&nbsp;
 				<br />
-				<a style="font-weight:bold;"> Player </a><img style="width:16px;" src="./img/x.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style="font-weight:bold;"> Super AI </a><img style="width:16px;" src="./img/o.png">
+				<a style="font-weight:bold;"> Player </a><img style="width:16px;" src="./img/light/x.png"> đấu với <a
+					style="font-weight:bold;"> Super AI </a><img style="width:16px;" src="./img/light/o.png">
 
 			</div>
 			<div id="board">
@@ -26,27 +38,21 @@
 			</div>
 			<div id="board-cpanel">
 				<button class="btn1 btn-med" id="newGame" onclick="ctrl.newGame()">
-					<i class="fa fa-gamepad fa-2x" aria-hidden="true"></i> Ván mới
-				</button>
+					<i class="fa fa-gamepad fa-2x" aria-hidden="true"></i> Ván mới</button>
 
 				<button class="btn1 btn-med" id="resign" onclick="ctrl.resign()">
-					<i class="fa fa-flag-o fa-2x" aria-hidden="true"></i> Chịu thua
-				</button>
+					<i class="fa fa-flag-o fa-2x" aria-hidden="true"></i> Chịu thua</button>
 
 				<select id="difficulty" class="btn1 btn-med">
 					<option value="1">Dễ</option>
-					<option value="2" selected>Khó</option>
+					<option value="2" selected>Trung bình</option>
+					<option value="3">Khó</option>
 				</select>
 
-				<div class="theme-switch-wrapper">
-					<label class="theme-switch" for="checkbox">
-						<input type="checkbox" id="checkbox" />
-						<div class="slider round"></div>
-				  </label> <em>&nbsp; Chế độ tối </em> 
-				</div>
-				
+				<a href="dark" class="btn1 btn-med">
+					<i class="fa fa-moon-o" style="color: #5c392a"></i>
+				</a>
 			</div>
-			
 		</div>
 
 </body>
@@ -55,4 +61,5 @@
 <script type="text/javascript" src="./js/caro.js"></script>
 <script type="text/javascript" src="./js/boardCtrl.js"></script>
 <script type="text/javascript" src="./js/referee.js"></script>
+
 </html>
