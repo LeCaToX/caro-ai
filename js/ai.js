@@ -12,7 +12,7 @@ function cval(){  // evaluate the board
 			count = (mArray[x].match(regexp3) || []).length; //number of XO;
 			if ((XO == O) == (ctrl.difficulty % 2 == 0))
 			switch (count) {
-				case 5: value += 10000000000; break;
+				case 5: value += 1000000000; break;
 				case 4: value += 100000; break;
 				case 3: value += 1000; break;
 				case 2: value += 10; break;
